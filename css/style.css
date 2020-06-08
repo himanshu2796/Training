@@ -14,30 +14,39 @@
     background-size:cover; */
     background-color:black;
  } 
- header {
-  
-background-color: black;
-} 
+
+
 section#top{
     background-image: url(/images/Background.jpg);
     background-repeat:no-repeat;
     background-position:right;
     background-size: 50% 100%;
-    width:1200px;
-    height:600px;
+    max-width:1200px;
+    max-height:600px;
 
 }
 #logo{
-    width:286px;
-    height:198px;
-    margin:200px 0px 200px 200px;
+    max-width:28.6vw;
+    max-height:19.8vw;
+    margin:15% 0% 15% 15%;
 }
+@media screen and (max-width: 640px) {
+     section#top {
+        background-image: url(/images/Background.jpg);
+        background-repeat:no-repeat;
+        background-position:right;
+        background-size: 50%;
+        size:auto;
+    } 
+
+}
+
 #logo:hover{
     opacity: 0.6;
 }
 #words{
     float:left;
-    padding-left:50px
+    padding-left:5%
 }
 ul {
     display:inline-block;
@@ -47,6 +56,7 @@ ul {
     overflow: auto;
     position:fixed;
     background-color:black;
+    width:100%
   }
   
   li {
@@ -59,45 +69,103 @@ ul {
     color:white;
     text-decoration:none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.08vw;
     text-align:center;
     font-weight:bold;
+    font-size:1.2vw;
     
   }
+  /* .dropdown {
+    position: relative;
+    display: none;
+    float:right;
+  }*/
+  /* @media screen and (max-width: 640px) { 
+    .dropbtn {
+        background-color: Black;
+        color: white;
+        padding: 2vw;
+        font-size: 2vw;
+        font-family:verdana;
+        border: none;
+        margin-left:7vw;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color:black;
+        width: 100%;
+        overflow:auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content li a {
+        position:relative;  
+        color: white;
+        padding: 1vw 1vw;
+        text-decoration: none;
+        font-family:verdana;
+        display: block;
+        right:0;
+        float:right;
+        font-size:2vw;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: grey;}
+      
+
+} */
+  /* @media screen and (max-width: 640px) {
+    li a {
+      font-size:2.3vw
+   } 
+
+} */
   .words{
-      padding:15px;
+      padding:1.1vw;
   }
 
   #imagetesting{
       float:right;
-      padding-left:170px;
-      padding-right:80px;
+      padding-left:13%;
+      padding-right:10%;
   }
   .images{
-      width:25px;
-      height:25px;
-      padding-right:8px;
-      padding-left:8px;
-      padding-top:12px;
-      padding-bottom:12px;
+      width:2vw;
+      height:2vw;
+      padding-right:0.66vw;
+      padding-left:0.66vw;
+      padding-top:0.66vw;
+      padding-bottom:0.66vw;
 
   }
+ 
   .images:hover{
     opacity: 0.6;
-    width:30px;
-    height:30px;
+    width:2.4vw;
+    height:2.4vw;
   }
   li a:hover {
     color: blue;
   }
   #tour{
-      width:153px;
-      height:80px;
+      width:14.0vw;
+      height:8vw;
       position:fixed;
       right:0px;
       bottom:0px;
-      padding-right:50px;
-      padding-bottom:30px;
+      padding-right:5vw;
+      padding-bottom:3vw;
     }
   #tour:hover{
     opacity: 0.6;
@@ -116,68 +184,112 @@ ul {
     color: blue;
   }
   #bottom{
-      margin-right:150px;
-      margin-left:150px;
+      margin-right:7vw;
+      margin-left:7vw;
   }
+  @media screen and (max-width: 640px) {
+    #bottom {
+        margin-right:5vw;
+        margin-left:5vw;
+   } 
+
+}
+
   #video{
-    size:auto;
-    margin-left:100px;
-    margin-top:30px;
+    margin-right:3vw;
+    margin-left:5vw;
+    margin-top:1vw;
     overflow:auto;
+    display:block;
+    
   }
   #video h1{
       color:white;
+      font-size:2vw;
       text-align:center;
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .improv{
       float:left;
-      margin-bottom:40px;
-      margin-right:40px;
-      border: 1px solid blue;
+      margin-bottom:4vw;
+      margin-right:2vw;
+      margin-left:2vw;
+      border: 0.15vw solid blue;
+  }
+  @media screen and (max-width: 1278px) {
+    .improv {
+     display:inline-block;
+     width: 36vw;
+     height:23.4vw;
+     margin-bottom:4vw;
+     margin-right:4vw;
+     margin-left:2vw;
+     border: 0.15vw solid blue;
+   }
+   #video{
+    margin-right:3vw;
+    margin-left:7vw;
+    margin-top:1vw;
+    overflow:auto;
+   }
+ }
+  @media screen and (max-width: 640px) {
+     .improv {
+      width: 98%;
+      height:auto;
+      display:block;
+      margin:0 0 10px auto; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    #video{
+        margin-right:3vw;
+        margin-left:4.5vw;
+        margin-top:1vw;
+        overflow:auto;
+       }
+
   }
 footer{
-    margin-left:50px;
-    margin-right:50px;
+    margin-left:5vw;
+    margin-right:5vw;
     color:white;
     size:auto;
-    border-top:1px solid grey
+    border-top:0.1vw solid grey
 
 }
 .footer{
     display:inline-block;
-    width:140px;
+    width:8vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 #footer1{
-    margin: 30px 0 35px 100px;
+    margin: 1.5vw 0 3.5vw 5vw;
 }
 #footer2{
-    margin: 30px 0 35px 60px;
+    margin: 1vw 0 3.5vw 8vw;
 
 }
 #footer3{
-    margin: 30px 0 35px 60px;
+    margin: 1vw 0 3.5vw 8vw;
 
 }
 #footer4{
-    margin: 30px 0 35px 60px;
+    margin: 1vw 0 3.5vw 8vw;
 
 }
 #footer5{
-    margin: 10px 0 35px 60px;
+    margin: 1vw 0 3.5vw 8vw;
 
 }
 #footer6{
-    margin: 10px 0 35px 60px;
+    margin: 1vw 0 3.5vw 8vw;
 
 }
    footer p{
     display:inline-block;
-    font-size: 12px;
-    line-height: 25px;
-    margin: 0 0 35px;
-    width:140px;
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+    margin: 0 0 3vw;
+    width:14vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 
 }
